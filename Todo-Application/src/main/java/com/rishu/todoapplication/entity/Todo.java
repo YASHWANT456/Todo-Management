@@ -1,13 +1,15 @@
 package com.rishu.todoapplication.entity;
 
-
-
+import java.util.Date;
 
 public class Todo {
 	private int id;
 	private String title;
 	private String content;
 	private String status;
+	private Date addedDate;
+	private Date toDoDate;
+	
 	
 	public int getId() {
 		return id;
@@ -41,12 +43,30 @@ public class Todo {
 		this.status = status;
 	}
 
-	public Todo(int id, String title, String content, String status) {
+	public Todo(int id, String title, String content, String status, Date addedDate,Date toDoDate) {
 		super();
 		this.id = id;
 		this.title = title;
 		this.content = content;
 		this.status = status;
+		this.addedDate = addedDate;
+		this.toDoDate = toDoDate;
+	}
+
+	public Date getAddedDate() {
+		return addedDate;
+	}
+
+	public void setAddedDate(Date addedDate) {
+		this.addedDate = addedDate;
+	}
+
+	public Date getToDoDate() {
+		return toDoDate;
+	}
+
+	public void setToDoDate(Date toDoDate) {
+		this.toDoDate = toDoDate;
 	}
 
 	public Todo() {

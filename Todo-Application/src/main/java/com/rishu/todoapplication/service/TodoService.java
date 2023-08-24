@@ -1,6 +1,7 @@
 package com.rishu.todoapplication.service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -21,11 +22,14 @@ public class TodoService
 	public ResponseEntity<Todo> createTodo(Todo todo) {
 		// TODO Auto-generated method stub
 		Todo obj = new Todo();
+		Date currentDate = new Date();
 		obj.setId(todo.getId());
 		obj.setContent(todo.getContent());
 		obj.setStatus(todo.getStatus());
 		obj.setTitle(todo.getTitle());
-		todos.add(todo);
+		obj.setAddedDate(currentDate);
+		obj.setToDoDate(todo.getToDoDate());
+		todos.add(obj);
 		return new ResponseEntity<>(obj,HttpStatus.CREATED);
 	}
 
