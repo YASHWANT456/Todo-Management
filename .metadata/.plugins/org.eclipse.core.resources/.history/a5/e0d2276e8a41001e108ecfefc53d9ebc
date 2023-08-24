@@ -1,0 +1,38 @@
+package com.rishu.practise1.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+@Service
+public class ServiceOne {
+
+	public ResponseEntity<String> getResponseOne() {
+		// TODO Auto-generated method stub
+		String str = "Hello Yash Welcome To Spring Boot Journey";
+		return new ResponseEntity<>(str,HttpStatus.OK);
+	}
+
+	public ResponseEntity<List<String>> getResponseTwo() {
+		// TODO Auto-generated method stub
+		List<String>list = new ArrayList<>();
+		list.add("Yash");
+		list.add("Raj");
+		list.add("Rohan");
+		return new ResponseEntity<>(list,HttpStatus.OK);
+	}
+
+	public ResponseEntity<List<Integer>> createData(List<Integer> list) {
+		// TODO Auto-generated method stub
+		List<Integer>list1 = new ArrayList<>();
+		for(Integer l1 : list)
+		{
+			list1.add(l1);
+		}
+		return new ResponseEntity<>(list1,HttpStatus.OK);
+	}
+
+}

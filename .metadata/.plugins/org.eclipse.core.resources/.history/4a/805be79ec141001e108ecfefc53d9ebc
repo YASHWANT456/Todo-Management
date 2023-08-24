@@ -1,0 +1,51 @@
+package com.rishu.practise1.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.rishu.practise1.entity.Student;
+import com.rishu.practise1.service.ServiceOne;
+
+@RestController
+@RequestMapping("/controller1")
+public class ControllerOne {
+	
+	@Autowired
+	ServiceOne serviceOne;
+	
+	
+	@GetMapping("/response1")
+	public ResponseEntity<String>getResponseOne()
+	{
+		return serviceOne.getResponseOne();
+		
+	}
+	@GetMapping("/response2")
+	public ResponseEntity<List<String>>getResponseTwo()
+	{
+		return serviceOne.getResponseTwo();
+	}
+	@PostMapping("/create1")
+	public ResponseEntity<List<Integer>>createData(@RequestBody List<Integer>list)
+	{
+		return serviceOne.createData(list);
+	}
+	@PostMapping("/create2")
+	public ResponseEntity<Student>createStudent(@RequestBody Student student)
+	{
+		return serviceOne.createStudent(student);
+	}
+	@PostMapping("/create3")
+	public ResponseEntity<List<Student>>createStudent2(@RequestBody List<Student>students)
+	{
+		return serviceOne.createStudent2(students);
+	}
+
+}
