@@ -49,7 +49,7 @@ The API provides a custom query for searching Todo items based on various criter
 
 ## Contributors
 
-- [github.com/YASHWANT456](https://github.com/YASHWANT456) - Creator
+- [YASHWANT456](https://github.com/YASHWANT456) - Creator
 
 
 
