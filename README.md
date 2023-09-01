@@ -1,53 +1,55 @@
-# Todo Management Application
+# Todo Application API
 
-Welcome to the Todo Management Application repository! This application allows users to perform CRUD (Create, Read, Update, Delete) operations on todo items. Users can also retrieve todo data based on their unique IDs. The application is built using Java, Spring Boot, Spring MVC, Spring Data JPA, and other technologies.
-
-**Made by YASHWANT456** - [GitHub Profile](https://github.com/YASHWANT456)
-
-## Table of Contents
-
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
-- [Contributing](#contributing)
-
+This is a Java-based Todo application API built using Spring Boot, Spring MVC, Spring Data JPA, and MySQL. The API allows users to perform various operations on Todo items.
 
 ## Features
 
-- Create new todo items.
-- Update existing todo items.
-- Delete todo items.
-- Retrieve todo data based on their unique IDs.
+- Create a new Todo item
+- Delete a Todo item by ID
+- Update a Todo item
+- Retrieve a list of all Todo items
+- Search for Todo items by various criteria (ID, title, status, content, added date, last date)
 
-## Technologies Used
+## Technology Stack
 
 - Java
-- Maven
 - Spring Boot
 - Spring MVC
-- Apache Tomcat
-- Postman
+- Spring Data JPA
+- MySQL
+- Maven
 
 ## Getting Started
 
-To get started with the Todo Management Application, follow these steps:
+To get started with this project, follow these steps:
 
-1. Clone this repository to your local machine.
-2. Open the project in your preferred IDE (e.g., Spring Tool Suite).
-3. Build and run the application using Maven or your IDE's built-in tools.
-4. Access the application's endpoints using Postman or your preferred API client.
+1. Clone the repository: `git clone https://github.com/YASHWANT456/todo-application.git`
+2. Import the project into your preferred IDE (e.g., Spring Tool Suite).
+3. Configure your MySQL database settings in the `application.properties` file.
+4. Build and run the project.
 
-Detailed setup and usage instructions can be found in the project's documentation.
+## API Endpoints
 
-## Contributing
+- `POST /api/todos`: Create a new Todo item.
+- `DELETE /api/todos/{id}`: Delete a Todo item by ID.
+- `PUT /api/todos/{id}`: Update a Todo item by ID.
+- `GET /api/todos`: Retrieve a list of all Todo items.
+- `GET /api/todos/{id}`: Retrieve a Todo item by ID.
+- `GET /api/todos/search`: Search for Todo items using query parameters (e.g., title, status, content, added date, last date).
 
-Contributions are welcome! If you'd like to contribute to the Todo Management Application project, please follow these steps:
+## Customized Exception Handling
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes and ensure they are properly tested.
-4. Commit your changes with clear commit messages.
-5. Push your changes to your fork.
-6. Create a pull request to the `main` branch of this repository.
+This project includes custom exception handling to handle errors gracefully. Global exception handling ensures that error responses are consistent and informative.
+
+## Custom Query for Search API
+
+The API provides a custom query for searching Todo items based on various criteria. This allows users to filter and retrieve specific Todo items that match their search criteria.
+
+
+
+## Contributors
+
+- [github.com/YASHWANT456](https://github.com/YASHWANT456) - Creator
+
 
 
