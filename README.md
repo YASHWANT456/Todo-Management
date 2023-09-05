@@ -46,10 +46,27 @@ This project includes custom exception handling to handle errors gracefully. Glo
 The API provides a custom query for searching Todo items based on various criteria. This allows users to filter and retrieve specific Todo items that match their search criteria.
 
 ## Screenshots
+
 Add Todo
 ![image](https://github.com/YASHWANT456/Todo-Management/assets/71956889/27eb3b3e-1e09-4a54-a532-72cb6084513f)
 
+Get All Todo
+![image](https://github.com/YASHWANT456/Todo-Management/assets/71956889/107a43a6-d8a7-4708-8a93-6200bfdcd370)
 
+Get Todo by Id
+![image](https://github.com/YASHWANT456/Todo-Management/assets/71956889/2a7a05f4-e09c-4ab3-ba4e-b6fbfa891218)
+
+Get Todo by Specific Criteria
+![image](https://github.com/YASHWANT456/Todo-Management/assets/71956889/83e8e1d4-9cfe-4ca8-839b-692229af5e1e)
+
+Update Todo
+![image](https://github.com/YASHWANT456/Todo-Management/assets/71956889/8623a2fe-21ec-46bf-85a1-e57dffe4603b)
+
+Delete Todo
+![image](https://github.com/YASHWANT456/Todo-Management/assets/71956889/64a2b3ee-9f04-428c-8338-a6c89f4eb80a)
+
+Custom Exception
+![image](https://github.com/YASHWANT456/Todo-Management/assets/71956889/5d386577-e58d-4e18-a6c1-aa41f78e3c67)
 
 ## Made By
 
