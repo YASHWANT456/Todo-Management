@@ -1,0 +1,8 @@
+package com.rishu.todoapplication.entity;
+
+@Entity
+public class Todo {
+	
+	
+
+}

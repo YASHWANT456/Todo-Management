@@ -1,0 +1,10 @@
+package com.rishu.todoapplication.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.rishu.todoapplication.entity.Todo;
+
+public interface TodoRepo extends JpaRepository<Todo, Integer> {
+	
+
+}

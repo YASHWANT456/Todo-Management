@@ -1,0 +1,33 @@
+package com.rishu.todoapplication.entity;
+
+import java.util.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import lombok.Data;
+
+@Entity
+@Data
+public class Todo {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id;
+	@NotBlank(message = "Title should not be empty")
+	private String title;
+	@NotBlank(message = "content should not be empty")
+	private String content;
+	@NotBlank(message = "status should not be empty")
+	private String status;
+	private Date addedDate;
+	@NotNull(message = "Todo should not be empty")
+	private Date todoDate;
+	
+	
+	
+	
+
+}

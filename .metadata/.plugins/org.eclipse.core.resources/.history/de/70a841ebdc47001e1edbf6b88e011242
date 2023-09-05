@@ -1,0 +1,63 @@
+package com.rishu.todoapplication.serviceImpl;
+
+
+import java.sql.Date;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.rishu.todoapplication.entity.Todo;
+import com.rishu.todoapplication.repo.TodoRepo;
+import com.rishu.todoapplication.service.TodoService;
+
+@Service
+public class TodoServiceImpl implements TodoService
+{
+
+	@Autowired
+	TodoRepo todoRepo;
+	@Override
+	public Todo addTodo(Todo todo) {
+		// TODO Auto-generated method stub
+		Todo addedTodo = todoRepo.save(todo);
+		return addedTodo;
+	}
+
+	@Override
+	public List<Todo> getAllTodo() {
+		// TODO Auto-generated method stub
+		List<Todo>todos = todoRepo.findAll();
+		return todos;
+	}
+	@Override
+	public void deleteTodo(Integer id) {
+		// TODO Auto-generated method stub
+		
+		todoRepo.deleteById(id);
+		
+	}
+
+	@Override
+	public Todo getTodo(Integer id) {
+		// TODO Auto-generated method stub
+		Todo todo = todoRepo.findById(id).get();
+		return todo;
+	}
+
+	@Override
+	public Todo updateTodo(Todo todo, Integer id) {
+		// TODO Auto-generated method stub
+		Todo updatedTodo = todoRepo.findById(id).get();
+		updatedTodo.setTitle(todo.getTitle());
+		updatedTodo.setContent(todo.getContent());
+		Date newDate = new Date();
+		updatedTodo.setAddedDate(newDate);
+		updatedTodo.setTodoDate(todo.getTodoDate());
+		updatedTodo.setStatus(todo.getStatus());
+		todoRepo.save(updatedTodo);
+		return updatedTodo;
+	}
+	
+
+}
