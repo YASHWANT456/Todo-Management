@@ -30,12 +30,12 @@ To get started with this project, follow these steps:
 
 ## API Endpoints
 
-- `POST /api/todos`: Create a new Todo item.
-- `DELETE /api/todos/{id}`: Delete a Todo item by ID.
-- `PUT /api/todos/{id}`: Update a Todo item by ID.
-- `GET /api/todos`: Retrieve a list of all Todo items.
-- `GET /api/todos/{id}`: Retrieve a Todo item by ID.
-- `GET /api/todos/search`: Search for Todo items using query parameters (e.g., title, status, content, added date, last date).
+- `POST /todo/addTodo`: Create a new Todo item.
+- `DELETE /todo/deleteTodo/{id}`: Delete a Todo item by ID.
+- `PUT /todo/updateTodo/{id}`: Update a Todo item by ID.
+- `GET /todo/getAllTodo`: Retrieve a list of all Todo items.
+- `GET /todo/getTodo/{id}`: Retrieve a Todo item by ID.
+- `GET /todo/getTodoBysearch/{search}`: Search for Todo items using query parameters (e.g., title, status, content, added date, last date).
 
 ## Customized Exception Handling
 
